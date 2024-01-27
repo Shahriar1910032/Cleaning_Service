@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: red;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mainpakg.ArethemticOperationController">
+   <children>
+      <TextField layoutX="207.0" layoutY="94.0" fx:id="xTextField">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="129.0" layoutY="99.0" text="Enter X :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="yTextField" layoutX="207.0" layoutY="140.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="129.0" layoutY="145.0" text="Enter Y :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="129.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#addButtonOnClick" style="-fx-background-color: black;" text="Addition " textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="SubtractButton" layoutX="240.0" layoutY="200.0" mnemonicParsing="false" onAction="#subtractButtonOnClick" onMouseEntered="#SubtractButtonOnMouseEntered" onMouseExited="#SubtractButtonOnMouseExit" style="-fx-background-color: black;" text="Subtraction" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="363.0" layoutY="200.0" mnemonicParsing="false" onAction="#modulasButtonOnClick" style="-fx-background-color: black;" text="Find Modulas" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="resultlabel" layoutX="140.0" layoutY="255.0" prefHeight="31.0" prefWidth="348.0" style="-fx-background-color: aqua;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="65.0" layoutY="255.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Result:" textFill="WHITE" />
+   </children>
+</AnchorPane>
