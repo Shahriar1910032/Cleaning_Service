@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.PickupController">
+   <children>
+      <AnchorPane prefHeight="402.0" prefWidth="158.0" style="-fx-background-color: #2c748a; -fx-background-radius: 10;">
+         <children>
+            <Button fx:id="AssignPickup" layoutX="17.0" layoutY="130.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #2c748a;" text="Deliveries" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="17.0" layoutY="163.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #2c748a;" text="Navigation" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="18.0" layoutY="195.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #2c748a;" text="Notifications" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="18.0" layoutY="229.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #2c748a;" text="Performance Metrics" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button layoutX="17.0" layoutY="262.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #2c748a;" text="Feedback &amp; Report" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="14.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Driver" textAlignment="CENTER" wrappingWidth="129.93017578125">
+               <font>
+                  <Font name="Helvetica" size="21.0" />
+               </font>
+            </Text>
+            <Button layoutX="17.0" layoutY="362.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #2c748a;" text="Log out" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Text layoutX="181.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Completion Times" />
+      <ChoiceBox layoutX="181.0" layoutY="82.0" prefWidth="150.0" style="-fx-background-color: silver;" />
+      <Text layoutX="345.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Completion Time:" />
+      <Label layoutX="469.0" layoutY="87.0" text="hh:mm:ss" />
+      <Text layoutX="181.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Ratings" />
+      <ChoiceBox layoutX="181.0" layoutY="210.0" prefWidth="150.0" style="-fx-background-color: silver;" />
+      <Text layoutX="345.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name:" />
+      <Text layoutX="345.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID:" />
+      <Text layoutX="345.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Rating:" />
+      <Label layoutX="453.0" layoutY="215.0" text="name" />
+      <Label layoutX="431.0" layoutY="237.0" text="id" />
+      <Label layoutX="463.0" layoutY="260.0" text="rating" />
+      <Text layoutX="181.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hours Worked" />
+      <ChoiceBox layoutX="181.0" layoutY="348.0" prefWidth="150.0" style="-fx-background-color: silver;" />
+      <Text layoutX="345.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Hours Worked:" />
+      <Label layoutX="481.0" layoutY="353.0" text="today/total" />
+   </children>
+</AnchorPane>

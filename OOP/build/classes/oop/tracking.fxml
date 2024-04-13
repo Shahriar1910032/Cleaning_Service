@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.trackingController">
+   <children>
+      <AnchorPane prefHeight="402.0" prefWidth="158.0" style="-fx-background-color: #4d483d; -fx-background-radius: 10;">
+         <children>
+            <Button fx:id="AssignPickup" layoutX="17.0" layoutY="130.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Pickup" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="17.0" layoutY="163.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Dropoff" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="18.0" layoutY="195.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4d483d;" text="Schedule" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="18.0" layoutY="229.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Maintenance " textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="17.0" layoutY="262.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Tracking" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button layoutX="17.0" layoutY="295.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Notifications" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="17.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Analytics" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="10.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transporation Manager" textAlignment="CENTER" wrappingWidth="137.93017578125">
+               <font>
+                  <Font name="Helvetica" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="184.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pickup Status" />
+      <Text layoutX="403.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Route:" />
+      <Text layoutX="421.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pickup Date:" />
+      <Text layoutX="420.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pickup Time:" />
+      <Text layoutX="399.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assigned Driver:" />
+      <Text layoutX="384.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status of Delivery:" />
+      <Text layoutX="181.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dropoff Status" />
+      <Text layoutX="403.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Route:" />
+      <Text layoutX="384.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status of Delivery:" />
+      <Text layoutX="417.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dropoff Time:" />
+      <Text layoutX="418.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dropoff Date:" />
+      <Text layoutX="399.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assigned Driver:" />
+      <ComboBox fx:id="pickupStatusComboBox" layoutX="184.0" layoutY="78.0" onAction="#handlePickupStatus" prefWidth="150.0" promptText="Select" style="-fx-background-color: silver;" />
+      <ComboBox fx:id="dropoffStatusComboBox" layoutX="181.0" layoutY="253.0" onAction="#handleDropoffStatus" prefWidth="150.0" promptText="Select" style="-fx-background-color: silver;" />
+      <Button layoutX="184.0" layoutY="122.0" mnemonicParsing="false" onAction="#checkPickupStatus" style="-fx-background-color: silver;" text="Check" />
+      <Button layoutX="181.0" layoutY="298.0" mnemonicParsing="false" onAction="#checkDropoffStatus" style="-fx-background-color: silver;" text="Check" />
+      <Label fx:id="pickupRouteLabel" layoutX="502.0" layoutY="83.0" text="Label" />
+      <Label fx:id="pickupStatusLabel" layoutX="502.0" layoutY="105.0" text="Label" />
+      <Label fx:id="pickupTimeLabel" layoutX="502.0" layoutY="127.0" text="Label" />
+      <Label fx:id="pickupDateLabel" layoutX="502.0" layoutY="151.0" text="Label" />
+      <Label fx:id="pickupDriverLabel" layoutX="502.0" layoutY="177.0" text="Label" />
+      <Label fx:id="dropoffRouteLabel" layoutX="502.0" layoutY="258.0" text="Label" />
+      <Label fx:id="dropoffStatusLabel" layoutX="502.0" layoutY="280.0" text="Label" />
+      <Label fx:id="dropoffTimeLabel" layoutX="502.0" layoutY="303.0" text="Label" />
+      <Label fx:id="dropoffDateLabel" layoutX="502.0" layoutY="327.0" text="Label" />
+      <Label fx:id="dropoffDriverLabel" layoutX="502.0" layoutY="350.0" text="Label" />
+   </children>
+</AnchorPane>
