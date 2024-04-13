@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.maintenanceController">
+   <children>
+      <AnchorPane prefHeight="402.0" prefWidth="158.0" style="-fx-background-color: #4d483d; -fx-background-radius: 10;">
+         <children>
+            <Button fx:id="AssignPickup" layoutX="17.0" layoutY="130.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Pickup" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="17.0" layoutY="163.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Dropoff" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="18.0" layoutY="195.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4d483d;" text="Schedule" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="18.0" layoutY="229.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Maintenance " textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button layoutX="17.0" layoutY="262.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Monitoring" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="17.0" layoutY="295.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Notifications" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="17.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Analytics" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="10.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transporation Manager" textAlignment="CENTER" wrappingWidth="137.93017578125">
+               <font>
+                  <Font name="Helvetica" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <CheckBox fx:id="routineInspectionCheckBox" layoutX="190.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleRoutineCheckBox" text="Routine Inspection" />
+      <CheckBox fx:id="oilChangeCheckBox" layoutX="190.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleOilChangeCheckBox" text="Oil Change" />
+      <CheckBox fx:id="tireRotationCheckBox" layoutX="190.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleTireRotationCheckBox" text="Tire Rotation" />
+      <Button layoutX="190.0" layoutY="301.0" mnemonicParsing="false" onAction="#ScheduleMaintenance" style="-fx-background-color: silver;" text="Shchedule Maintenance" />
+      <Text layoutX="198.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Vehicle" />
+      <Text layoutX="401.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Personnel" />
+      <ComboBox fx:id="SelectVehicleComboBox" layoutX="198.0" layoutY="92.0" onAction="#handleSelectVehicle" prefWidth="150.0" style="-fx-background-color: silver;" />
+      <ComboBox fx:id="SelectPersonnelComboBox" layoutX="401.0" layoutY="92.0" onAction="#handleSelectPersonnel" prefWidth="150.0" style="-fx-background-color: silver;" />
+      <Label fx:id="ScheduleMaintenanceLabel" layoutX="191.0" layoutY="343.0" prefHeight="17.0" prefWidth="400.0" />
+      <Label fx:id="routineLabel" layoutX="191.0" layoutY="371.0" prefHeight="17.0" prefWidth="139.0" />
+      <Label fx:id="oilLabel" layoutX="347.0" layoutY="371.0" prefHeight="17.0" prefWidth="103.0" />
+      <Label fx:id="tireLabel" layoutX="473.0" layoutY="371.0" prefHeight="17.0" prefWidth="112.0" />
+   </children>
+</AnchorPane>
