@@ -50,8 +50,8 @@ public class trackingController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //combobox will pickup the location of delivery and its tracking details from a central databse
-        pickupStatusComboBox.getItems().addAll("123 Maple Street", "721 Oak Avenue", "101 Pine Lane");
-        dropoffStatusComboBox.getItems().addAll("76 Lake Avenue", "451 Plainsview", "101 Pine Lane");
+        pickupStatusComboBox.getItems().addAll("123 Maple Street", "721 Oak Avenue");
+        dropoffStatusComboBox.getItems().addAll("76 Lake Avenue", "451 Plainsview");
     }
 
     @FXML
@@ -72,6 +72,14 @@ public class trackingController implements Initializable {
             pickupTimeLabel.setText("12:03 PM");
             pickupDateLabel.setText("13/07/24");
             pickupDriverLabel.setText("Joze Gonzales");
+            
+        } else if ("721 Oak Avenue".equals(selectedPickup)) { // example tracking, data will be fetched from a central database in real implementation 
+            pickupRouteLabel.setText("Loadstar Ave Route");
+            pickupStatusLabel.setText("On Route");
+            pickupTimeLabel.setText("05:03 PM");
+            pickupDateLabel.setText("21/07/24");
+            pickupDriverLabel.setText("Jack Huoston");
+            
         }
     }
 
@@ -83,6 +91,14 @@ public class trackingController implements Initializable {
             dropoffTimeLabel.setText("03:56 PM");
             dropoffDateLabel.setText("08/12/24");
             dropoffDriverLabel.setText("Max Walters");
+            
+        } else if ("451 Plainsview".equals(selectedDropoff)) {
+            dropoffRouteLabel.setText("Nakatomi River Side");
+            dropoffStatusLabel.setText("Dropped off");
+            dropoffTimeLabel.setText("11:52 PM");
+            dropoffDateLabel.setText("02/12/24");
+            dropoffDriverLabel.setText("Liam Maron");
+            
         }
     }
     
