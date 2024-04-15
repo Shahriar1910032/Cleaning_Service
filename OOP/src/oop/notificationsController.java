@@ -38,11 +38,16 @@ public class notificationsController implements Initializable{
         addNotification("- New policies implemented regarding staff worktime\n"
                 + "Please check the policies tab for further details");
         
-        addPolicy("- Staff worktime update\n");
-        addPolicy("- CEO and upper management change\n");
+        addPolicy("- Staff worktime update\n"
+                + "Work Schedules will be shortened by 30 mins due to recent heatwaves/n");
+        addPolicy("- CEO and upper management change\n"
+                + "Zac Smith has been appointed as the new CEO under the new Board/n"
+                + "and will soon be implementing upper management changes");
         
-        addAnnouncement("- Upcoming Holiday Schedule\n");
-        addAnnouncement("- Company Retreat\n");
+        addAnnouncement("- Upcoming Holiday\n"
+                + "15/7/24 to 21/7/24 Spring Break\n");
+        addAnnouncement("- Company Retreat\n"
+                + "30/8/24");
         
     }
     
