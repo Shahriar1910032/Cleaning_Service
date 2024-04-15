@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainApplication.DashboardCleaningStaffController">
+   <children>
+      <Label alignment="CENTER" layoutX="233.0" layoutY="33.0" text="DashboardCleaningStaff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="288.0" layoutY="137.0" mnemonicParsing="false" onAction="#switchToScene19" text="Analytics" />
+      <Button layoutX="257.0" layoutY="371.0" mnemonicParsing="false" onAction="#switchToScene27" text="Leave Application" />
+      <Button layoutX="237.0" layoutY="478.0" mnemonicParsing="false" onAction="#switchToScene31" text="Payroll And Attendance" />
+      <Button layoutX="289.0" layoutY="251.0" mnemonicParsing="false" onAction="#switchToScene23" text="Reports" />
+      <Button layoutX="297.0" layoutY="84.0" mnemonicParsing="false" onAction="#switchToScene17" text="Tasks" />
+      <Button layoutX="287.0" layoutY="189.0" mnemonicParsing="false" onAction="#switchToScene21" text="Meeting" />
+      <Button layoutX="282.0" layoutY="310.0" mnemonicParsing="false" onAction="#switchToScene25" text="Resources" />
+      <Button layoutX="240.0" layoutY="422.0" mnemonicParsing="false" onAction="#switchToScene29" text="Cleaning Staff Feedack" />
+      <Button layoutX="288.0" layoutY="534.0" mnemonicParsing="false" text="Sign Out" />
+   </children>
+</AnchorPane>
