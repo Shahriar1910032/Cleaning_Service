@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="857.0" prefWidth="1164.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainapplication.Customer_And_Customer_Service_dashboard_sceneController">
+   <children>
+      <Label layoutX="306.0" layoutY="37.0" text="Customer Service Dashboard">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Button layoutX="102.0" layoutY="127.0" mnemonicParsing="false" onAction="#switch_to_Book_Cleaning_services" prefHeight="109.0" prefWidth="279.0" text="Book Cleaning Service" />
+      <Button layoutX="102.0" layoutY="252.0" mnemonicParsing="false" onAction="#switch_to_Contact_customer_support_scene" prefHeight="109.0" prefWidth="279.0" text="Contact Customer Support" />
+      <Button layoutX="500.0" layoutY="127.0" mnemonicParsing="false" onAction="#switch_to_Feedback_scene" prefHeight="109.0" prefWidth="279.0" text="Feedback / Review" />
+      <Button layoutX="500.0" layoutY="252.0" mnemonicParsing="false" onAction="#switch_to_Sign_in_Scene" prefHeight="109.0" prefWidth="279.0" text="Signout" />
+      <Button layoutX="317.0" layoutY="469.0" mnemonicParsing="false" onAction="#switch_to_Contact_customer_support_scene" prefHeight="109.0" prefWidth="279.0" text="Switch To HR Head Dashboard" />
+   </children>
+</AnchorPane>

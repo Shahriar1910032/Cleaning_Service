@@ -8,8 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="829.0" prefWidth="1119.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="mainapplication.Book_Cleaning_servicesController">
+<AnchorPane id="AnchorPane" prefHeight="829.0" prefWidth="1119.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainapplication.Book_Cleaning_servicesController">
    <children>
       <Label layoutX="499.0" layoutY="40.0" text="Book Services" />
       <Label layoutX="60.0" layoutY="131.0" text="Cloths Type" />
@@ -29,5 +28,6 @@
         </columns>
       </TableView>
       <Button fx:id="Confirn_order_button" layoutX="905.0" layoutY="733.0" mnemonicParsing="false" text="Confirm Order" />
+      <Button fx:id="approve_leave_submit_button1" layoutX="92.0" layoutY="733.0" mnemonicParsing="false" onAction="#HR_dashboard_scene" text="Back" />
    </children>
 </AnchorPane>

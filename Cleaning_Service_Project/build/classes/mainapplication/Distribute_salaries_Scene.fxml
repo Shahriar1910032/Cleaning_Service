@@ -6,8 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="741.0" prefWidth="1013.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="mainapplication.Distribute_salaries_SceneController">
+<AnchorPane id="AnchorPane" prefHeight="741.0" prefWidth="1013.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainapplication.Distribute_salaries_SceneController">
    <children>
       <Label layoutX="97.0" layoutY="138.0" text="Employee Name - " />
       <Label layoutX="126.0" layoutY="181.0" text="Designation - " />
@@ -16,7 +15,7 @@
       <ComboBox fx:id="salaryscene_employeeName_combobox" layoutX="234.0" layoutY="133.0" prefWidth="150.0" />
       <ComboBox fx:id="salaryscene_designation_combobox" layoutX="235.0" layoutY="171.0" prefWidth="150.0" />
       <TextField fx:id="salary_amount_textfield" layoutX="236.0" layoutY="214.0" />
-      <Button fx:id="submit_salary_button" layoutX="330.0" layoutY="307.0" mnemonicParsing="false" text="Submit" />
-      <Label layoutX="273.0" layoutY="350.0" text="**Employee will get a notification." />
+      <Button fx:id="submit_salary_button" layoutX="356.0" layoutY="304.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="approve_leave_submit_button1" layoutX="158.0" layoutY="304.0" mnemonicParsing="false" onAction="#HR_dashboard_scene" text="Back" />
    </children>
 </AnchorPane>

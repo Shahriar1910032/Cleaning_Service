@@ -6,8 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="806.0" prefWidth="1043.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="mainapplication.Approval_of_leave_of_absence_SceneController">
+<AnchorPane id="AnchorPane" prefHeight="806.0" prefWidth="1043.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainapplication.Approval_of_leave_of_absence_SceneController">
    <children>
       <Label layoutX="406.0" layoutY="43.0" text="Approval of leave of absence" />
       <Label layoutX="46.0" layoutY="191.0" text="See If there are any pending leave application" />
@@ -15,5 +14,6 @@
       <TextField fx:id="pending_leave_application_text_field" layoutX="373.0" layoutY="96.0" prefHeight="231.0" prefWidth="556.0" />
       <ComboBox fx:id="approve_leave_combobox" layoutX="223.0" layoutY="445.0" prefWidth="150.0" />
       <Button fx:id="approve_leave_submit_button" layoutX="853.0" layoutY="684.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="approve_leave_submit_button1" layoutX="104.0" layoutY="676.0" mnemonicParsing="false" onAction="#HR_dashboard_scene" text="Back" />
    </children>
 </AnchorPane>
