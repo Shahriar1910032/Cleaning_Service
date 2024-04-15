@@ -26,5 +26,7 @@
       <TextField fx:id="sign_in_email_address_username_text_field1" layoutX="630.0" layoutY="93.0" prefHeight="21.0" prefWidth="187.0" promptText="Email/username" />
       <PasswordField fx:id="sign_in_password_password_field" layoutX="630.0" layoutY="131.0" promptText="Password" />
       <Button fx:id="sign_in_button" layoutX="687.0" layoutY="195.0" mnemonicParsing="false" text="Sign in" />
+      <Button fx:id="sign_up_button1" layoutX="172.0" layoutY="517.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="344.0" text="Sign in as HR Head" />
+      <Button fx:id="sign_up_button11" layoutX="571.0" layoutY="517.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="344.0" text="Sign in as Customer" />
    </children>
 </AnchorPane>
