@@ -12,10 +12,12 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Button layoutX="102.0" layoutY="173.0" mnemonicParsing="false" prefHeight="112.0" prefWidth="232.0" text="Go to Training program Page" />
-      <Button layoutX="102.0" layoutY="325.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="128.0" prefWidth="248.0" text="Leave of absence requests" />
-      <Button layoutX="551.0" layoutY="128.0" mnemonicParsing="false" text="DIstribute Salaries" />
-      <Button layoutX="482.0" layoutY="373.0" mnemonicParsing="false" text="Evaluate Employee Performance" />
-      <Button layoutX="482.0" layoutY="426.0" mnemonicParsing="false" text="Recruit New Members" />
+      <Button layoutX="102.0" layoutY="173.0" mnemonicParsing="false" onAction="#switch_to_Arrange_training_programs_scene" prefHeight="128.0" prefWidth="327.0" text="Go to Training program Page" />
+      <Button layoutX="102.0" layoutY="325.0" mnemonicParsing="false" onAction="#switch_to_Approval_of_leave_of_absence_Scene" prefHeight="128.0" prefWidth="327.0" text="Leave of absence requests" />
+      <Button layoutX="472.0" layoutY="173.0" mnemonicParsing="false" onAction="#switch_to_Distribute_salaries_Scene" prefHeight="121.0" prefWidth="334.0" text="DIstribute Salaries" />
+      <Button layoutX="472.0" layoutY="325.0" mnemonicParsing="false" onAction="#switch_to_Evaluate_employee_performance" prefHeight="128.0" prefWidth="334.0" text="Evaluate Employee Performance" />
+      <Button layoutX="102.0" layoutY="515.0" mnemonicParsing="false" onAction="#switch_to_Recruit_Members_scene" prefHeight="106.0" prefWidth="327.0" text="Recruit New Members" />
+      <Button layoutX="482.0" layoutY="515.0" mnemonicParsing="false" onAction="#switch_to_Sign_in_Scene" prefHeight="106.0" prefWidth="327.0" text="Log Out" />
+      <Button layoutX="300.0" layoutY="662.0" mnemonicParsing="false" onAction="#Customer_And_Customer_Service_dashboard_scene" prefHeight="106.0" prefWidth="327.0" text="Switch To Customer Service Dashboard" />
    </children>
 </AnchorPane>
