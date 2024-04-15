@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainApplication.FeedbackControllerM">
+   <children>
+      <Label layoutX="269.0" layoutY="33.0" text="Feedback" />
+      <Label layoutX="31.0" layoutY="80.0" text="Staff ID:" />
+      <Label layoutX="31.0" layoutY="124.0" text="Feedback:" />
+      <TextField fx:id="staffIdTF" layoutX="97.0" layoutY="75.0" />
+      <TextField fx:id="feedbackTF" layoutX="101.0" layoutY="119.0" prefHeight="107.0" prefWidth="187.0" />
+      <Button fx:id="sendFeedbackOnButtonClicked" layoutX="135.0" layoutY="241.0" mnemonicParsing="false" text="Send Feedback" />
+      <Button fx:id="goToDashboardOnButtonClicked" layoutX="236.0" layoutY="340.0" mnemonicParsing="false" onAction="#switchToScene6" text="Go To Dasboard" />
+   </children>
+</AnchorPane>
