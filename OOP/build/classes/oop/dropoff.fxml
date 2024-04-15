@@ -13,12 +13,12 @@
    <children>
       <AnchorPane prefHeight="402.0" prefWidth="158.0" style="-fx-background-color: #4d483d; -fx-background-radius: 10;">
          <children>
-            <Button fx:id="AssignPickup" layoutX="17.0" layoutY="130.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Pickup" textFill="WHITE">
+            <Button fx:id="AssignPickup" layoutX="17.0" layoutY="130.0" mnemonicParsing="false" onAction="#switchToScene1" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Pickup" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="AssignDropoff" layoutX="17.0" layoutY="163.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Dropoff" textFill="WHITE">
+            <Button fx:id="AssignDropoff" layoutX="17.0" layoutY="163.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Dropoff" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
@@ -26,27 +26,27 @@
                   <DropShadow />
                </effect>
             </Button>
-            <Button layoutX="18.0" layoutY="195.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4d483d;" text="Schedule" textFill="WHITE">
+            <Button layoutX="18.0" layoutY="195.0" mnemonicParsing="false" onAction="#switchToScene3" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4d483d;" text="Schedule" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="18.0" layoutY="229.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Maintenance " textFill="WHITE">
+            <Button layoutX="18.0" layoutY="229.0" mnemonicParsing="false" onAction="#switchToScene4" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Maintenance " textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="262.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Monitoring" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="262.0" mnemonicParsing="false" onAction="#switchToScene5" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Tracking" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="295.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Notifications" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#switchToScene6" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Notifications" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Analytics" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="330.0" mnemonicParsing="false" onAction="#switchToScene7" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Analytics" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>

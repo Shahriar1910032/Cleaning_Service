@@ -12,11 +12,11 @@ public class MainClass extends Application {
     }
     
     @Override 
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("maintenance.fxml"));
-        Scene pickupScene = new Scene(root);
-        primaryStage.setScene(pickupScene);
-        primaryStage.show();
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("pickup.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }
 

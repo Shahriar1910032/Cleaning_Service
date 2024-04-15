@@ -14,37 +14,37 @@
    <children>
       <AnchorPane prefHeight="402.0" prefWidth="158.0" style="-fx-background-color: #4d483d; -fx-background-radius: 10;">
          <children>
-            <Button fx:id="AssignPickup" layoutX="17.0" layoutY="130.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Pickup" textFill="WHITE">
+            <Button fx:id="AssignPickup" layoutX="17.0" layoutY="130.0" mnemonicParsing="false" onAction="#switchToScene1" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Pickup" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="163.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Dropoff" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="163.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Dropoff" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="18.0" layoutY="195.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4d483d;" text="Schedule" textFill="WHITE">
+            <Button layoutX="18.0" layoutY="195.0" mnemonicParsing="false" onAction="#switchToScene3" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4d483d;" text="Schedule" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="18.0" layoutY="229.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Maintenance " textFill="WHITE">
+            <Button layoutX="18.0" layoutY="229.0" mnemonicParsing="false" onAction="#switchToScene4" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Maintenance " textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="262.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Tracking" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="262.0" mnemonicParsing="false" onAction="#switchToScene5" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Tracking" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="295.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Notifications" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#switchToScene6" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Notifications" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Analytics" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="330.0" mnemonicParsing="false" onAction="#switchToScene7" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Analytics" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
@@ -65,14 +65,16 @@
          </children>
       </AnchorPane>
       <Accordion layoutX="281.0" layoutY="106.0" />
-      <Hyperlink layoutX="180.0" layoutY="60.0" text="Analytics Form" />
+      <Hyperlink fx:id="analyticsFormLink" layoutX="180.0" layoutY="60.0" text="Analytics Form" />
       <Text layoutX="180.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fill Up Form" />
-      <Button layoutX="180.0" layoutY="106.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="112.0" style="-fx-background-color: silver;" text="Submit Form" />
+      <Button layoutX="180.0" layoutY="106.0" mnemonicParsing="false" onAction="#analyticsSubmit" prefHeight="27.0" prefWidth="112.0" style="-fx-background-color: silver;" text="Submit Form" />
       <Text layoutX="315.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
-      <TextField layoutX="358.0" layoutY="59.0" />
+      <TextField fx:id="analyticsFormDateField" layoutX="358.0" layoutY="59.0" />
       <Text layoutX="180.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Review Attendence Sheet for  " />
-      <Label layoutX="384.0" layoutY="178.0" text="dd/mm/yy" />
-      <Hyperlink layoutX="183.0" layoutY="201.0" text="Attendence Sheet" />
-      <Button layoutX="180.0" layoutY="252.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="186.0" style="-fx-background-color: silver;" text="Submit Attendence Sheet" />
+      <Label fx:id="attendenceSheetDateLabel" layoutX="384.0" layoutY="178.0" text="dd/mm/yy" />
+      <Hyperlink fx:id="attendenceSheetLink" layoutX="183.0" layoutY="201.0" text="Attendence Sheet" />
+      <Button layoutX="180.0" layoutY="252.0" mnemonicParsing="false" onAction="#attendenceSubmit" prefHeight="27.0" prefWidth="186.0" style="-fx-background-color: silver;" text="Submit Attendence Sheet" />
+      <Label fx:id="analyticsLabel" layoutX="183.0" layoutY="152.0" prefHeight="17.0" prefWidth="284.0" />
+      <Label fx:id="AttendenceLabel" layoutX="178.0" layoutY="294.0" prefHeight="17.0" prefWidth="317.0" />
    </children>
 </AnchorPane>
