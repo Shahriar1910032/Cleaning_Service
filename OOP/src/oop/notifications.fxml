@@ -6,39 +6,40 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.PickupController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.notificationsController">
    <children>
       <AnchorPane prefHeight="402.0" prefWidth="158.0" style="-fx-background-color: #4d483d; -fx-background-radius: 10;">
          <children>
-            <Button fx:id="AssignPickup" layoutX="17.0" layoutY="130.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Pickup" textFill="WHITE">
+            <Button fx:id="AssignPickup" layoutX="17.0" layoutY="130.0" mnemonicParsing="false" onAction="#switchToScene1" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Pickup" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="163.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Dropoff" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="163.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Assign Dropoff" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="18.0" layoutY="195.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4d483d;" text="Schedule" textFill="WHITE">
+            <Button layoutX="18.0" layoutY="195.0" mnemonicParsing="false" onAction="#switchToScene3" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4d483d;" text="Schedule" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="18.0" layoutY="229.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Maintenance " textFill="WHITE">
+            <Button layoutX="18.0" layoutY="229.0" mnemonicParsing="false" onAction="#switchToScene4" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Maintenance " textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="262.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Tracking" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="262.0" mnemonicParsing="false" onAction="#switchToScene5" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Tracking" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="17.0" layoutY="295.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Notifications" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#switchToScene6" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Notifications" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
@@ -46,7 +47,7 @@
                   <DropShadow />
                </effect>
             </Button>
-            <Button layoutX="17.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Analytics" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="330.0" mnemonicParsing="false" onAction="#switchToScene7" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Analytics" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
@@ -59,21 +60,30 @@
          </children>
       </AnchorPane>
       <Accordion layoutX="281.0" layoutY="106.0" />
-      <TabPane layoutX="158.0" prefHeight="405.0" prefWidth="440.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="tabpane" layoutX="158.0" prefHeight="405.0" prefWidth="440.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Notifications">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="302.0" style="-fx-background-color: white; -fx-background-radius: 30;" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="302.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                     <children>
+                        <VBox fx:id="notificationArea" layoutX="8.0" layoutY="14.0" prefHeight="344.0" prefWidth="420.0" />
+                     </children></AnchorPane>
             </content>
           </Tab>
           <Tab text="Policy Updates">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox fx:id="policyArea" layoutX="14.0" layoutY="14.0" prefHeight="346.0" prefWidth="415.0" />
+                     </children></AnchorPane>
             </content>
           </Tab>
             <Tab text="Announcements">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox fx:id="announcementArea" layoutX="14.0" layoutY="14.0" prefHeight="344.0" prefWidth="230.0" />
+                     </children></AnchorPane>
               </content>
             </Tab>
         </tabs>

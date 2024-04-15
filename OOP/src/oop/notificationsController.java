@@ -2,11 +2,7 @@ package oop;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,88 +11,59 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TabPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class analyticsController implements Initializable {
+public class notificationsController implements Initializable{
 
     @FXML
     private Button AssignPickup;
     @FXML
-    private Hyperlink analyticsFormLink;
+    private TabPane tabpane;
     @FXML
-    private TextField analyticsFormDateField;
+    private VBox notificationArea;
     @FXML
-    private Label attendenceSheetDateLabel;
+    private VBox policyArea;
     @FXML
-    private Hyperlink attendenceSheetLink;
-    @FXML
-    private Label analyticsLabel;
-    @FXML
-    private Label AttendenceLabel;
-
-    @Override
+    private VBox announcementArea;
+    
+    
+     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        attendenceSheetDateLabel.setText("23/5/24"); //example date, otherwise date will be fetched
+        addNotification(" - Manager Dashboard has been updated\n"
+                + "New features implemented including the ability to track deliveries\n"
+                + "and their status\n");
+        addNotification("- New policies implemented regarding staff worktime\n"
+                + "Please check the policies tab for further details");
         
+        addPolicy("- Staff worktime update\n");
+        addPolicy("- CEO and upper management change\n");
         
-        analyticsFormLink.setOnAction(event -> {
-            try {
-                openGoogleDoc1();
-            } catch (IOException ex) {
-                Logger.getLogger(analyticsController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        });
-        
-        attendenceSheetLink.setOnAction(event -> {
-            try {
-                openGoogleDoc2();
-            } catch (IOException ex) {
-                Logger.getLogger(analyticsController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        });
-    }
-    
-    private void openGoogleDoc1() throws IOException {
-        String googleDocUrl = "https://docs.google.com/document/d/your-document-id/edit";
-
-        java.awt.Desktop.getDesktop().browse(java.net.URI.create(googleDocUrl));
-        
-    }
-    
-    private void openGoogleDoc2() throws IOException {
-        String googleDocUrl = "https://docs.google.com/document/d/your-document-id/edit";
-
-        java.awt.Desktop.getDesktop().browse(java.net.URI.create(googleDocUrl));
+        addAnnouncement("- Upcoming Holiday Schedule\n");
+        addAnnouncement("- Company Retreat\n");
         
     }
     
     
-    
-
-    @FXML
-    public void analyticsSubmit(ActionEvent event) {
-        String date = analyticsFormDateField.getText();
+    public void addNotification(String message) {
+        Label notificationLabel = new Label(message);
         
-        List<String> analyticsList = new ArrayList<>();
+        notificationArea.getChildren().add(notificationLabel);
         
-        analyticsList.add(date);
-        analyticsList.add("https://docs.google.com/document/d/your-document-id/edit");
-        
-        analyticsLabel.setText("Analytics Form submitted for " + date);
     }
-
-    @FXML
-    public void attendenceSubmit(ActionEvent event) {
-        List<String> attendenceList = new ArrayList<>();
+    
+    public void addPolicy(String message) {
+        Label policyLabel = new Label(message);
         
-        attendenceList.add("\"https://docs.google.com/document/d/your-document-id/edit\"");
+        policyArea.getChildren().add(policyLabel);
+    }
+    
+    public void addAnnouncement(String message) {
+        Label announcementLabel = new Label(message);
         
-        String date = attendenceSheetDateLabel.getText();
-        
-        AttendenceLabel.setText("Attendence Sheet submitted for " + date);
+        announcementArea.getChildren().add(announcementLabel);
     }
     
     private Stage stage;
