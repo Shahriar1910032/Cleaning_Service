@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CleaningStaff.MeetingController">
+   <children>
+      <Label layoutX="272.0" layoutY="42.0" text="Meeting" />
+      <Label layoutX="24.0" layoutY="78.0" text="Choose a Date:" />
+      <Label layoutX="24.0" layoutY="131.0" text="Meeting Details:" />
+      <TextField fx:id="meetingDetailsTF" layoutX="141.0" layoutY="126.0" prefHeight="71.0" prefWidth="218.0" />
+      <Button layoutX="226.0" layoutY="319.0" mnemonicParsing="false" onAction="#goToDashboardButtonOnClicked" text="Go To Dashboard" />
+      <DatePicker fx:id="chooseDatePicker" layoutX="132.0" layoutY="73.0" />
+   </children>
+</AnchorPane>
