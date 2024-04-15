@@ -46,7 +46,7 @@
                   <Font name="Helvetica" size="21.0" />
                </font>
             </Text>
-            <Button layoutX="17.0" layoutY="362.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #2c748a;" text="Log out" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="362.0" mnemonicParsing="false" onAction="#switchToScene6" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #2c748a;" text="Log out" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>

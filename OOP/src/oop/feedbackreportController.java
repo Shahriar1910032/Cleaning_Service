@@ -55,11 +55,11 @@ public class feedbackreportController implements Initializable{
         
         optionSelection = feedbackReportComboBox.getValue();
         
-        if (optionSelection == "Feedback") {
+        if ("Feedback".equals(optionSelection)) {
             feedbackList.add("https://forms.gle/4CkpyQhC8SunetXV9");
             
         
-        } else if (optionSelection == "Report") {
+        } else if ("Report".equals(optionSelection)) {
             reportList.add("https://forms.gle/4CkpyQhC8SunetXV9");
         }
         
@@ -71,12 +71,12 @@ public class feedbackreportController implements Initializable{
     public void handleFillOutFormLink(ActionEvent event) {
         optionSelection = feedbackReportComboBox.getValue();
         
-        if (optionSelection == "Feedback") {
+        if ("Feedback".equals(optionSelection)) {
             
             String url = "https://forms.gle/4CkpyQhC8SunetXV9";
             openGoogleDocs(url);
         
-        } else if (optionSelection == "Report") {
+        } else if ("Report".equals(optionSelection)) {
             String url = "https://forms.gle/4CkpyQhC8SunetXV9";
             openGoogleDocs(url);
         }
@@ -128,6 +128,14 @@ public class feedbackreportController implements Initializable{
     
     public void switchToScene5(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("feedbackreport.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void switchToScene6(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

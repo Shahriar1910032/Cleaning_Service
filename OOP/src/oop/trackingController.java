@@ -66,7 +66,7 @@ public class trackingController implements Initializable {
 
     @FXML
     public void checkPickupStatus(ActionEvent event) {
-        if (selectedPickup == "123 Maple Street") { // example tracking, data will be fetched from a central database in real implementation 
+        if ("123 Maple Street".equals(selectedPickup)) { // example tracking, data will be fetched from a central database in real implementation 
             pickupRouteLabel.setText("East Desert Route");
             pickupStatusLabel.setText("Laundry Picked Up");
             pickupTimeLabel.setText("12:03 PM");
@@ -77,7 +77,7 @@ public class trackingController implements Initializable {
 
     @FXML
     public void checkDropoffStatus(ActionEvent event) {
-        if (selectedDropoff == "76 Lake Avenue") {
+        if ("76 Lake Avenue".equals(selectedDropoff)) {
             dropoffRouteLabel.setText("13th Street Overpass");
             dropoffStatusLabel.setText("On route");
             dropoffTimeLabel.setText("03:56 PM");
@@ -140,6 +140,14 @@ public class trackingController implements Initializable {
     
     public void switchToScene7(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("analytics.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void switchToScene8(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

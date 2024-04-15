@@ -61,20 +61,20 @@ public class performance_metricsController implements Initializable {
     public void deliveryCheck(ActionEvent event) {
         deliverySelection = deliveryComboBox.getValue();
         
-        if (deliverySelection == "71 Pine Lane") {
+        if ("71 Pine Lane".equals(deliverySelection)) {
             deliveryTimeLabel.setText("01:02:03");
-        } else if (deliverySelection == "51st Ave") {
+        } else if ("51st Ave".equals(deliverySelection)) {
             deliveryTimeLabel.setText("02:10:56");
         }
     }
 
     @FXML
     public void ratingsCheck(ActionEvent event) {
-        if (deliverySelection == "71 Pine Lane") {
+        if ("71 Pine Lane".equals(deliverySelection)) {
             customerNameLabel.setText("Jack Walters");
             customerIdLabel.setText("2047");
             customerRatingLabel.setText("4/5");
-        } else if (deliverySelection == "51st Ave") {
+        } else if ("51st Ave".equals(deliverySelection)) {
             customerNameLabel.setText("Sarah Connors");
             customerIdLabel.setText("2056");
             customerRatingLabel.setText("5/5");
@@ -86,11 +86,11 @@ public class performance_metricsController implements Initializable {
     private void hoursWorkedCheck(ActionEvent event) {
         dateSelection = hoursWorkedComboBox.getValue();
         
-        if (dateSelection == "11/10/24") {
+        if ("11/10/24".equals(dateSelection)) {
             hoursWorkedLabel.setText("8 hours 3 mins/8 hours 3 mins");
-        } else if (dateSelection == "12/10/24") {
+        } else if ("12/10/24".equals(dateSelection)) {
             hoursWorkedLabel.setText("7 hours 54 mins/15 hours 57 mins");
-        } else if (dateSelection == "13/10/24") {
+        } else if ("13/10/24".equals(dateSelection)) {
             hoursWorkedLabel.setText("8 hours 2 mins/23 hours 59 mins");
         }
     }
@@ -133,6 +133,14 @@ public class performance_metricsController implements Initializable {
     
     public void switchToScene5(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("feedbackreport.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void switchToScene6(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

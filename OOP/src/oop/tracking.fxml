@@ -55,6 +55,11 @@
                   <Font name="Helvetica" size="21.0" />
                </font>
             </Text>
+            <Button layoutX="18.0" layoutY="362.0" mnemonicParsing="false" onAction="#switchToScene8" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #4d483d;" text="Log out" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <Text layoutX="184.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pickup Status" />
